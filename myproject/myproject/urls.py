@@ -8,6 +8,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.Top.as_view()),
     path('crud/', views.ProductListView.as_view(), name="list"),
+    path('crud/new/', views.ProductCreateView.as_view(), name="create"),
     path('crud/detail/<int:pk>', views.ProductDetailView.as_view(), name="detail"),
 ]
 
