@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}編集{% endblock %}
+
+{% block content %}    
+<h1>編集</h1>
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  <table class="table table-striped">
+  {{ form.as_table }}
+  </table>
+  <br>
+  <a class="btn btn-secondary" href="{% url 'crud:crud_list' %}">戻る</a>
+  <input type="submit" class="btn btn-success" value="編集">
+</form>
+{% endblock %}
