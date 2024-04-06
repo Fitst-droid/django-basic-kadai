@@ -10,7 +10,7 @@ class TopView(TemplateView):
 class ProductCreateView(CreateView):
   model = Product
   fields = '__all__'
-  success_url = reverse_lazy('crud_list') 
+  success_url = reverse_lazy('list') 
 
 class ProductListView(ListView):
   template_name = 'list.html'
@@ -20,7 +20,7 @@ class ProductListView(ListView):
 class ProductDetailView(DetailView):
   model = Product
   fileds = '__all__'
-  success_url = reverse_lazy('crud_list')
+  success_url = reverse_lazy('list')
 
 # class ProductUpdateView(UpdateView):
 #   model = Product
